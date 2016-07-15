@@ -17,4 +17,5 @@ RUN	mkdir -p /apache2/lock && \
 	rm -rf /var/www/html && \
 	ln -s /apache2/www /var/www/html
 COPY scripts/run-apache2.sh /apache2/run.sh
+USER 1000
 CMD bash /apache2/run.sh
